@@ -6,11 +6,12 @@ import (
 )
 
 func main() {
-	var n, k int
-	fmt.Println("The program determines if a number n is a power of k.Enter n and k: ")
+	var n, k float64
+	fmt.Println("The program determines if a number n is a power of k. Enter n and k: ")
 	fmt.Scan(&n, &k)
-	if n%2 == 0 {
-		fmt.Println("")
+	if math.Sqrt(n) == k{
+		fmt.Println(n,"is a power of",k)
+	} else {
+		fmt.Println(n,"isn't a power of",k)
 	}
-	math.Sqrt(n)
-}
+}	
